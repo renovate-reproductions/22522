@@ -13,7 +13,7 @@
   regexManagers: [
     {
       fileMatch: [".+/root-deployment\\.yml$"],
-      matchStrings: [ // https://regex101.com/r/MQDzSp/1
+      matchStrings: [ // https://regex101.com/r/MQDzSp/2
         "( +comments:.*\\n( {6}.*\\n)+)? +repository: (?<depName>[a-z0-9\\/\\-]+?)\\n( +sha1: .*\\n)?( +skip_branch_checkout: .*\\n)?( +tag_prefix: (?<tagPrefix>.*)\\n)? +version: '?(?<currentValue>[0-9\\.\\-\\+]+?)'?\\n"
       ],
       datasourceTemplate: "github-tags",
