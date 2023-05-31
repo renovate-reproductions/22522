@@ -1,0 +1,12 @@
+---
+name: coab-depls
+releases:
+  haproxy:
+    repository: cloudfoundry/haproxy-boshrelease
+    version: 11.10.2
+  helm-kubectl:
+    repository: orange-cloudfoundry/helm-kubectl-boshrelease
+    tag_prefix: ''
+    version: '39'
+stemcell:
+  version: '1.97'
