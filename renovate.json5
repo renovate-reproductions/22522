@@ -14,7 +14,7 @@
     {
       fileMatch: [".+/root-deployment\\.yml$"],
       matchStrings: [
-        "( +comments:.*\\n( {6}.*\\n)+)? +repository: (?<depName>[a-z0-9/-]*?)\\n( +sha1: .*\\n)?( +skip_branch_checkout: .*\\n)?( +tag_prefix: (?<tagPrefix>.*)\\n)? +version: '?(?<currentValue>[0-9\\.\\-]*?)'?\\n"
+        "( +comments:.*\\n( {6}.*\\n)+)? +repository: (?<depName>[a-z0-9\\/\\-]+?)\\n( +sha1: .*\\n)?( +skip_branch_checkout: .*\\n)?( +tag_prefix: (?<tagPrefix>.*)\\n)? +version: '?(?<currentValue>[0-9\\.\\-]+?)'?\\n"
       ],
       datasourceTemplate: "github-tags",
       versioningTemplate: "loose",
