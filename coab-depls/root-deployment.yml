@@ -6,7 +6,7 @@ releases:
     version: 11.10.2
   helm-kubectl:
     repository: orange-cloudfoundry/helm-kubectl-boshrelease
-    tag_prefix: ''
-    version: '39'
+    tag_prefix: ""
+    version: "39"
 stemcell:
-  version: '1.97'
+  version: "1.97"

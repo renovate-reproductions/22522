@@ -4,25 +4,21 @@
     "config:base",
     ":disableRateLimiting",
     ":rebaseStalePrs",
-    "github>orange-cloudfoundry/renovate-presets:default.json5" //mainly for dockerhub access token to increase pull limits
+    "github>orange-cloudfoundry/renovate-presets:default.json5", //mainly for dockerhub access token to increase pull limits
   ],
 
-  packageRules: [
-  ],
+  packageRules: [],
 
   regexManagers: [
     {
       fileMatch: [".+/root-deployment\\.yml$"],
-      matchStrings: [ // https://regex101.com/r/MQDzSp/2
-        "( +comments:.*\\n( {6}.*\\n)+)? +repository: (?<depName>[a-z0-9\\/\\-]+?)\\n( +sha1: .*\\n)?( +skip_branch_checkout: .*\\n)?( +tag_prefix: (?<tagPrefix>.*)\\n)? +version: '?(?<currentValue>[0-9\\.\\-\\+]+?)'?\\n"
+      matchStrings: [
+        // https://regex101.com/r/MQDzSp/2
+        "( +comments:.*\\n( {6}.*\\n)+)? +repository: (?<depName>[a-z0-9\\/\\-]+?)\\n( +sha1: .*\\n)?( +skip_branch_checkout: .*\\n)?( +tag_prefix: (?<tagPrefix>.*)\\n)? +version: '?(?<currentValue>[0-9\\.\\-\\+]+?)'?\\n",
       ],
       datasourceTemplate: "github-tags",
       versioningTemplate: "loose",
-      extractVersionTemplate: "{{#if tagPrefix}}(?<version>.*){{else}}^v(?<version>.*){{/if}}"
+      extractVersionTemplate: "{{#if tagPrefix}}(?<version>.*){{else}}^v(?<version>.*){{/if}}",
     },
-  ]
-
+  ],
 }
-
-
-
