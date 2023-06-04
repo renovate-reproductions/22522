@@ -6,9 +6,7 @@
     ":rebaseStalePrs",
     "github>orange-cloudfoundry/renovate-presets:default.json5", //mainly for dockerhub access token to increase pull limits
   ],
-
   packageRules: [],
-
   regexManagers: [
     {
       fileMatch: [".+/root-deployment\\.yml$"],
